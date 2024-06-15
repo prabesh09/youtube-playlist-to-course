@@ -3,18 +3,20 @@ import playlist from './data/test.json'
 
 const App = () => {
   const [active, setActive] = useState(0)
-  const [videoTag, setVideoTag] = useState(videoHandler(playlist[0].url))
+  const [videoTag, setVideoTag] = useState('')
 
   useEffect(() => {
     const currentTag = localStorage.getItem('videoTag')
     const activeTag = Number(localStorage.getItem('activeTag'))
 
-    if (currentTag) {
+    if (currentTag && !isNaN(Number(activeTag))) {
       setVideoTag(currentTag)
-      setActive(activeTag)
+      setActive(Number(activeTag))
     } else {
       setVideoTag(videoHandler(playlist[0].url))
       setActive(0)
+      localStorage.setItem('videoTag', extractVideoTag(playlist[0].url))
+      localStorage.setItem('activeTag', 0)
     }
   }, [])
 
@@ -28,7 +30,7 @@ const App = () => {
   const videoHandler = (url, index) => {
     const tag = extractVideoTag(url)
     setVideoTag(tag)
-    setActive(Number(index))
+    setActive(index)
     localStorage.setItem('videoTag', tag)
     localStorage.setItem('activeTag', index)
   }
