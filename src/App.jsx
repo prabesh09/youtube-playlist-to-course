@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import playlist from './data/test.json'
 
 const App = () => {
-  const [active, setActive] = useState(0)
-  const [videoTag, setVideoTag] = useState('')
+  const [active, setActive] = useState()
+  const [videoTag, setVideoTag] = useState()
 
   useEffect(() => {
     const currentTag = localStorage.getItem('videoTag')
