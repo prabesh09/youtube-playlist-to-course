@@ -2,14 +2,19 @@ import { useEffect, useState } from "react"
 import playlist from './data/test.json'
 
 const App = () => {
+  const [active, setActive] = useState(0)
   const [videoTag, setVideoTag] = useState('')
 
   useEffect(() => {
     const currentTag = localStorage.getItem('videoTag')
+    const activeTag = Number(localStorage.getItem('activeTag'))
+
     if (currentTag) {
       setVideoTag(currentTag)
+      setActive(activeTag)
     } else {
       setVideoTag(videoHandler(playlist[0].url))
+      setActive(0)
     }
   }, [])
 
@@ -19,10 +24,13 @@ const App = () => {
     return match ? match[1] : ''
   }
 
-  const videoHandler = (url) => {
+
+  const videoHandler = (url, index) => {
     const tag = extractVideoTag(url)
     setVideoTag(tag)
+    setActive(index)
     localStorage.setItem('videoTag', tag)
+    localStorage.setItem('activeTag', index)
   }
 
   return (
@@ -35,12 +43,12 @@ const App = () => {
 
       <div className="h-[95vh] overflow-y-auto pt-4">
         {playlist.map((list, index) => (
-          <div key={index} className="bg-blue-600 hover:bg-blue-500 text-white m-4 rounded-xl p-4 cursor-pointer" onClick={() => videoHandler(list.url)}>
+          <div key={index} className={`${index === active ? 'bg-red-600 hover:bg-red-500' : 'bg-blue-600 hover:bg-blue-500'}  text-white m-4 rounded-xl p-4 cursor-pointer`} onClick={() => videoHandler(list.url, index)}>
             {index + 1}. {list.title}
           </div>
         ))}
       </div>
-    </div>
+    </div >
   )
 }
 
