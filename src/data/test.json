@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Episode 0 - Tutorial Introduction - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=3MMonOWGe0M&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=1&pp=iAQB"
+    },
+    {
+        "title": "Episode 1 - Reading our MNIST Data - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=DeBkDPwHvCQ&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=2&pp=iAQB"
+    },
+    {
+        "title": "Episode 2 - Abstract Layer Class - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=mHMfXweQ9uM&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=3&t=5s&pp=iAQB"
+    },
+    {
+        "title": "Episode 3 - Fully Connected Layer - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=JJUlkPFq1q8&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=4&pp=iAQB"
+    },
+    {
+        "title": "Episode 4 - Max Pooling Layer - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=8WrEz-M50oQ&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=5&pp=iAQB"
+    },
+    {
+        "title": "Episode 5 - Convolution Layer Forward Pass - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=mWL0_11uiEU&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=6&pp=iAQB"
+    },
+    {
+        "title": "Episode 6 - Convolution Layer Backpropagation - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=njlyOAiK_yE&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=7&pp=iAQB"
+    },
+    {
+        "title": "Episode 7 - Training and Testing - Convolutional Neural Network from Scratch",
+        "url": "https://www.youtube.com/watch?v=N62cVxu9JqE&list=PLpcNcOt2pg8k_YsrMjSwVdy3GX-rc_ZgN&index=8&pp=iAQB"
+    }
+]
