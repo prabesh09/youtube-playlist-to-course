@@ -3,7 +3,7 @@ import playlist from './data/test.json'
 
 const App = () => {
   const [active, setActive] = useState(0)
-  const [videoTag, setVideoTag] = useState('')
+  const [videoTag, setVideoTag] = useState(videoHandler(playlist[0].url))
 
   useEffect(() => {
     const currentTag = localStorage.getItem('videoTag')
@@ -28,7 +28,7 @@ const App = () => {
   const videoHandler = (url, index) => {
     const tag = extractVideoTag(url)
     setVideoTag(tag)
-    setActive(index)
+    setActive(Number(index))
     localStorage.setItem('videoTag', tag)
     localStorage.setItem('activeTag', index)
   }
